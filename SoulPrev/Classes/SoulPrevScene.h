@@ -3,7 +3,9 @@
 
 #include "cocos2d.h"
 
-class HelloWorld : public cocos2d::CCLayer
+using namespace cocos2d;
+
+class SoulPrev : public cocos2d::CCLayerColor
 {
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
@@ -14,9 +16,15 @@ public:
     
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
+    
+    // add a image of fish
+    void createFish(const CCPoint&);
+    
+    // create an animation, can be implemented as a util function
+    void createFishAnimation(const CCPoint&, int);
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(SoulPrev);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
